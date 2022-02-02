@@ -57,46 +57,76 @@ class _DetailPageState extends State<DetailPage> {
                   ],
                 )),
             Positioned(
-                top: 320,
-                child: Container(
-                  padding: EdgeInsets.only(top: 30, left: 20, right: 20),
-                  width: MediaQuery.of(context).size.width,
-                  height: 500,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      )),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                        AppLargeText(text: "Yosemite", color: Colors.black.withOpacity(0.8),),
-                        AppLargeText(text: "\$250", color: AppColors.mainColor,),
-                      ],),
-                      SizedBox(height: 10,),
-                      Row(children: [
-                        Icon(Icons.location_on, color: AppColors.mainColor,),
-                        AppText(text: "U.S.A, California", color: AppColors.textColor1,)
-                        
-                      ],),
-                      SizedBox(height: 10,),
-                      Row(
-                        children: [
-                          Wrap(children: List.generate(5, (index) {
-                            return Icon(Icons.star, color: index<gottenStars? AppColors.starColor: AppColors.textColor2);
-                          }),),
-                          SizedBox(width: 10,),
-                          AppText(text: '(4.0)', color: AppColors.textColor2,)
-                        ],
-                      )
-                    ],
-                  ),
-                  
+              top: 320,
+              child: Container(
+                padding: EdgeInsets.only(top: 30, left: 20, right: 20),
+                width: MediaQuery.of(context).size.width,
+                height: 500,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    )),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppLargeText(
+                          text: "Yosemite",
+                          color: Colors.black.withOpacity(0.8),
+                        ),
+                        AppLargeText(
+                          text: "\$250",
+                          color: AppColors.mainColor,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: AppColors.mainColor,
+                        ),
+                        AppText(
+                          text: "U.S.A, California",
+                          color: AppColors.textColor1,
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Wrap(
+                          children: List.generate(5, (index) {
+                            return Icon(Icons.star,
+                                color: index < gottenStars
+                                    ? AppColors.starColor
+                                    : AppColors.textColor2);
+                          }),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        AppText(
+                          text: '(4.0)',
+                          color: AppColors.textColor2,
+                        ),
+                        SizedBox(
+                          height: 25,
+                        ),
+                      ],
+                    )
+                  ],
                 ),
+              ),
             )
           ],
         ),
